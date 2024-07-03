@@ -4,9 +4,7 @@ let g;
 beforeEach(() => (g= new Game()));
 
 test("gutter game", () => {
-    const pins=0;
-    const rolls=20;
-    rollMany(rolls,pins);
+    rollMany(20,0);
     expect(g.score()).toBe(0);
 });
 
