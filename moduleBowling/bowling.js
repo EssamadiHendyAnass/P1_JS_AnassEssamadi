@@ -1,6 +1,8 @@
 class Game{
     roll(){}
-    score(){}
+    score(){
+        return 0;
+    }
 }
 module.exports = {
     Game
