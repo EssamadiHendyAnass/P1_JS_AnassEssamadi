@@ -1,5 +1,4 @@
 class Game{
-    _score=0;
     _rolls= []
     roll(pins){
         this._rolls.push(pins);
