@@ -44,3 +44,6 @@ function rollSpare(){
     g.roll(5);
 }
 
+function rollStrike(){
+    g.roll(10);
+}
