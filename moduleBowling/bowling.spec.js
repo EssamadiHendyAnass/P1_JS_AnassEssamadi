@@ -28,6 +28,11 @@ test("one strike", () => {
     expect(g.score()).toBe(24);
 });
 
+test("perfect game", () => {
+    rollMany(12,10);
+    expect(g.score()).toBe(300);
+});
+
 function rollMany(rolls,pins){
     for(let i=0;i<20;i++){
         g.roll(pins);
@@ -38,3 +43,4 @@ function rollSpare(){
     g.roll(5);
     g.roll(5);
 }
+
