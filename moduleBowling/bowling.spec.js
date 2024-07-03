@@ -30,7 +30,7 @@ test("one strike", () => {
 
 test("perfect game", () => {
     rollMany(12,10);
-    expect(g.score()).toBe("fail");
+    expect(g.score()).toBe(300);
 });
 
 function rollMany(rolls,pins){
