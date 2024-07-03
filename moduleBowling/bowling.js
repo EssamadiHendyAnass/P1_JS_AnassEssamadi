@@ -3,6 +3,7 @@ class Game{
     _rolls= []
     roll(pins){
         this._score += pins;
+        this._rolls.push(pins);
     }
 
     score(){
