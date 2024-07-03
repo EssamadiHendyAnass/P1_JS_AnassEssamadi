@@ -1,5 +1,8 @@
 const {Game}= require('./bowling');
 
+let g;
+beforeEach(() => (g= new Game()));
+
 test("gutter game", () => {
     const g = new Game();
     for(let i=0;i<20;i++){
