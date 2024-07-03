@@ -1,4 +1,6 @@
-class Game{}
+class Game{
+    roll(){}
+}
 module.exports = {
     Game
 }
