@@ -16,7 +16,7 @@ class Game{
                 score+=10+spareBonus(rolls,frameIndex);
                 frameIndex+=2;
             }else{
-                score+=rolls[frameIndex]+rolls[frameIndex+1];
+                score+=sumOfBallsInFrame(rolls,frameIndex);
                 frameIndex+=2;
             }
         }
@@ -30,6 +30,10 @@ function strikeBonus(rolls,frameIndex){
 
 function spareBonus(rolls, frameIndex){
     return rolls[frameIndex+2];
+}
+
+function sumOfBallsInFrame(rolls,frameIndex){
+    return rolls[frameIndex]+rolls[frameIndex+1];
 }
 
 function isSpare(rolls,frameIndex){
