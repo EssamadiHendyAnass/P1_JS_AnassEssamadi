@@ -13,7 +13,7 @@ class Game{
                 score+= 10+strikeBonus(rolls,frameIndex);
                 frameIndex+=1;
             }else if(isSpare(rolls,frameIndex)){
-                score+=10+rolls[frameIndex+2];
+                score+=10+spareBonus(rolls,frameIndex);
                 frameIndex+=2;
             }else{
                 score+=rolls[frameIndex]+rolls[frameIndex+1];
@@ -26,6 +26,10 @@ class Game{
 
 function strikeBonus(rolls,frameIndex){
     return rolls[frameIndex+1]+ rolls[frameIndex +2];
+}
+
+function spareBonus(rolls, frameIndex){
+    return rolls[frameIndex+2];
 }
 
 function isSpare(rolls,frameIndex){
