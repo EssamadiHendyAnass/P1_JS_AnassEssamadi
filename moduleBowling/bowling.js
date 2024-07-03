@@ -9,7 +9,7 @@ class Game{
         let score=0;
         let frameIndex=0;
         for(let frame=0;frame<10;frame++){
-            if(rolls[frameIndex]=10){
+            if(isStrike(rolls,frameIndex)){
                 score+= 10+strikeBonus(rolls,frameIndex);
                 frameIndex+=1;
             }else if(isSpare(rolls,frameIndex)){
@@ -22,6 +22,10 @@ class Game{
         }
         return score;
     }
+}
+
+function isStrike(rolls, frameIndex){
+    return rolls[frameIndex]==10;
 }
 
 function strikeBonus(rolls,frameIndex){
