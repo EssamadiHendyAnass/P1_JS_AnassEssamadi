@@ -5,9 +5,12 @@ class Game{
     }
 
     score(){
+        const rolls=this._rolls;
         let score=0;
-        for(let i=0;i<this._rolls.length;i++){
-            score+=this._rolls[i];
+        let i=0;
+        for(let frame=0;frame<10;frame++){
+            score+=this._rolls[i]+this._rolls[i+1];
+            i+=2;
         }
         return score;
     }
